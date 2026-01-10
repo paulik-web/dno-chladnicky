@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" >
+    <title>Dno Chladničky</title>
+</head>
+<body>
+    <div class = "browser">
+        <div class = "tabs-bar">
+            <div class = "tab active" onclick = "openTab(event, 'home')">
+                <span class = "tab-title"> Home Page</span>
+            </div>
+            <div class = "tab" onclick = "openTab(event, 'fridge')">
+                <span class = "tab-title"> Chladnička</span>
+            </div>
+            <div class = "tab" onclick = "openTab(event, 'recepty')">
+                <span class = "tab-title"> Recepty</span>
+            </div>
+        </div>
+        <div class = "context">
+            <div id = "home" class = "tab-panel active">
+                <header>
+                    <h1>"Ako prežiť semester a nezbankrotovať ? Mám naozaj takú prázdnu chladničku ako si myslím ?"</h1>
+                    <h2>"Varíme z potravín ktoré nájdete v tak povedanej "prázdnej chladničke". Uvidíte, že aj z mála sa dá uvariť dobre.</h2>
+                    <div class = "header-buttons">
+                        <button onclick ="switchTabFromButton('fridge')">začať experimentovať</button>
+                    </div>
+                </header>
+                <main class="main-content">
+                    <section class = "intro">
+                        <h3>Prečo ste si nás otvorili ?</h3>
+                        <p> Vytvorený sme pre každý jeden moment, kedy sa s prázdnym pohľadom pozeráte do chladničky, a jediné, čo vás napadne, je: „Veď v nej nič nieje!“. 
+                            Chceme vám ukázať, že aj z tých posledných zabudnutých surovín sa dá vykúzliť niečo chutné a nové. 
+                            Našim cieľom je premeniť frustráciu na inšpiráciu, ušetriť vaše peniaze, 
+                            znížiť plytvanie a dokázať, že varenie zo zvyškov môže byť prekvapivo kreatívne. </p>
+                    </section>
+                    <div class = "fotka">
+                        <img src="sočka.jpg" class="img-doboxu">
+                    </div>
+                </main>
+            </div>
+            <div id = "fridge" class = "tab-panel">
+                <h1> Vyklikaj si potraviny z ktorých chceš variť.</h1>
+                <div class="fridge-container">
+                    <div class="fridge-visual">
+                        <div class = "food" data-name = "šunka" onclick = "toggleFood (this)">🍖<span>Šunka</span></div>
+                        <div class = "food" data-name = "ryba" onclick = "toggleFood (this)">🐟<span>Ryba</span></div>
+                        <div class = "food" data-name = "k-mäso" onclick = "toggleFood (this)">🍗<span>Kuracie mäso</span></div>
+                        <div class = "food" data-name = "cibula" onclick = "toggleFood (this)">🧅<span>Cibuľa</span></div>
+                        <div class = "food" data-name = "cesnak" onclick = "toggleFood (this)">🧄<span>Cesnak</span></div>
+                        <div class = "food" data-name = "šalat" onclick = "toggleFood (this)">🥬<span>Šalát</span></div>
+                        <div class = "food" data-name = "mlieko" onclick = "toggleFood (this)">🥛<span>Mlieko</span></div>
+                        <div class = "food" data-name = "syr" onclick = "toggleFood (this)">🧀<span>Syr</span></div>
+                        <div class = "food" data-name = "vajko" onclick = "toggleFood (this)">🥚<span>Vajíčko</span></div>
+                        <div class = "food" data-name = "ryža" onclick = "toggleFood (this)">🍚<span>Ryža</span></div>
+                        <div class = "food" data-name = "zemiaky" onclick = "toggleFood (this)">🥔<span>Zemiaky</span></div>
+                        <div class = "food" data-name = "pasta" onclick = "toggleFood (this)">🍝<span>Cestoviny</span></div>
+                        <div class = "food" data-name = "paradajky" onclick = "toggleFood (this)">🍅<span>Paradajky</span></div>
+                        <div class = "food" data-name = "maslo" onclick = "toggleFood (this)">🧈<span>Maslo</span></div>
+                        <div class = "food" data-name = "mrkva" onclick = "toggleFood (this)">🥕<span>Mrkva</span></div>
+                        <div class = "food" data-name = "paprika" onclick = "toggleFood (this)">🫑<span>Paprika</span></div>
+                    </div>
+                </div>
+                <div class = "f-ui">
+                    <button class = "kuk-butt" onclick = "generateRecipes()">🔍 Čo môžeme uvariť?</button>
+                </div>
+            </div>
+            <div id = "recepty" class = "tab-panel">
+                <h1> Vitaj na zbierke receptov.</h1>
+            </div>
+        </div>
+    </div>
+    
+    <footer class ="footer-nav">
+        <p>
+            <button>o nás</button>
+            <button>kontakt</button>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

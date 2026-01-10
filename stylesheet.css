@@ -1,0 +1,220 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #afba82;
+    color: #01352c;
+    margin: 0;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    color: #184512;
+    text-align: center;
+    font-size:2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 400;
+    text-align:center;
+    color: #3c7035;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #be4b49;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color:#9d3836;
+    transform: scale(1.05);
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    background: none; 
+    box-shadow: none;
+    padding: 0 ;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.fav {
+    grid-column: span 2;
+    background: #fdfff8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-doboxu {
+    width: 100%;         
+    height: 100%;        
+    object-fit: cover;   
+    border-radius: 10px; 
+    display: block;
+}
+
+
+
+
+.intro, .fotka{
+    background:#fdfff8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.intro p {
+    font-size: 1.2rem; 
+    background: none;  
+    box-shadow: none;  
+    padding: 10px 0;
+}
+
+div>div,p {
+    background: #f8ffe7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba (0,0,0,0.1);
+}
+
+h3{
+    color:#731331;
+    margin-top: 0;
+}
+
+.footer-nav {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+}
+
+.tabs-bar {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 10px;
+    height: 50px;
+    background-color: #01352c;
+    border-radius: 8px 8px 0 0;
+    gap: 5px;
+}
+
+.tab {
+    min-width: 130px;
+    max-width: 200px;
+    height: 36px;
+    background-color:#04473c;
+    color:#e1eacd;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: none;
+    margin-bottom:0; 
+}
+
+.tab:hover {
+    background-color:#092d27;
+    color:#ffffff;
+}
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab.active {
+    background-color:#e1eacd;
+    color:#01352c;
+    font-weight: bold;
+    height: 42px;
+}
+
+.context {
+    background-color:#e1eacd;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+    min-height: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.325);
+}
+
+.fridge-visual {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+    border: 15px solid #01352c;
+    border-radius: 30px;
+    background-color: #e8f0d1; 
+}
+
+.food {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 35px;
+    filter: grayscale(1) brightness(0.3); 
+    transition: all 0.3s ease;
+}
+
+.food span {
+    font-size: 10px;
+    color: #01352c;
+    font-weight: bold;
+    background: rgba(255,255,255,0.7);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.food.active {
+    filter: grayscale(0) brightness(1); 
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.food[data-name = "šunka"] { top: 50px; left: 60px; }
+.food[data-name = "ryba"] { top: 50px; left: 160px; }
+.food[data-name = "k-mäso"] { top: 50px; left: 260px; }
+.food[data-name = "cibula"] { top: 50px; left: 380px; }
+.food[data-name = "cesnak"] { top: 180px; left: 60px; }
+.food[data-name = "šalat"] { top: 180px; left: 160px; }
+.food[data-name = "mlieko"] { top: 180px; right: 75px; }
+.food[data-name = "syr"] { top: 180px; right: 175px; }
+.food[data-name = "vajko"] { top:440px; left: 60px; }
+.food[data-name = "ryža"] { top:440px; left: 160px; }
+.food[data-name = "zemiaky"] { top:440px; right: 75px; }
+.food[data-name = "pasta"] { top:440px; right: 175px; }
+.food[data-name = "paradajky"] {top:310px; left: 60px; }
+.food[data-name = "maslo"] {top:310px; left: 160px; }
+.food[data-name = "mrkva"] { top:310px; right: 75px; }
+.food[data-name = "paprika"] { top:310px; right: 175px; }
