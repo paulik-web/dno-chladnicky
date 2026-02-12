@@ -56,7 +56,7 @@
                         <div class = "food" data-name = "vajko" onclick = "toggleFood (this)">🥚<span>Vajíčko</span></div>
                         <div class = "food" data-name = "ryža" onclick = "toggleFood (this)">🍚<span>Ryža</span></div>
                         <div class = "food" data-name = "zemiaky" onclick = "toggleFood (this)">🥔<span>Zemiaky</span></div>
-                        <div class = "food" data-name = "pasta" onclick = "toggleFood (this)">🍝<span>Cestoviny</span></div>
+                        <div class = "food" data-name = "cestoviny" onclick = "toggleFood (this)">🍝<span>Cestoviny</span></div>
                         <div class = "food" data-name = "paradajky" onclick = "toggleFood (this)">🍅<span>Paradajky</span></div>
                         <div class = "food" data-name = "maslo" onclick = "toggleFood (this)">🧈<span>Maslo</span></div>
                         <div class = "food" data-name = "mrkva" onclick = "toggleFood (this)">🥕<span>Mrkva</span></div>
@@ -72,11 +72,18 @@
             </div>
         </div>
     </div>
+    <div id ="extra-page" class="full-page-overlay" style="display:none;">
+        <div class ="extra-content">
+            <h1 id ="extra-title">Názov</h1>
+            <div id ="extra-body" class="intro"></div>
+            <button onclick ="closeExtraPage()" class="back-button"> - Späť </button>
+        </div>
+    </div>
     
     <footer class ="footer-nav">
         <p>
-            <button>o nás</button>
-            <button>kontakt</button>
+            <button onclick = "showExtraPage('about')">o nás</button>
+            <button onclick = "showExtraPage('contact')">kontakt</button>
         </p>
     </footer>
     <script src="script.js"></script>
