@@ -89,3 +89,32 @@ function generateRecipes() {
     receptyPanel.innerHTML = htmlObsah;
     switchTabFromButton('recepty');
 }
+
+
+function showExtraPage(type) {
+    const overlay = document.getElementById('extra-page');
+    const title = document.getElementById('extra-title');
+    const body = document.getElementById('extra-body');
+
+    if (type === 'about') {
+        title.innerText = "O nás";
+        body.innerHTML = `
+            <p>Kto sme ?</p>
+            <p>Som študentka strednej školy</p> 
+            
+             `;
+    } else if (type === 'contact') {
+        title.innerText = "Kontakt";
+        body.innerHTML = `
+            <p>Máš nápad na skvelý recept? Alebo ti niečo nefunguje?</p>
+            <p>📧 Email: <b>dno.chladničky@gmail.com</b></p>
+            <p>📸 Instagram: <b>@kostkovaa.portfolio</b></p>
+        `;
+    }
+
+    overlay.style.display = 'flex'; 
+}
+
+function closeExtraPage() {
+    document.getElementById('extra-page').style.display = 'none';
+}
