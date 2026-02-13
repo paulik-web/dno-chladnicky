@@ -42,25 +42,14 @@
                 </main>
             </div>
             <div id = "fridge" class = "tab-panel">
-                <h1> Vyklikaj si potraviny z ktorých chceš variť.</h1>
-                <div class="fridge-container">
-                    <div class="fridge-visual">
-                        <div class = "food" data-name = "šunka" onclick = "toggleFood (this)">🍖<span>Šunka</span></div>
-                        <div class = "food" data-name = "ryba" onclick = "toggleFood (this)">🐟<span>Ryba</span></div>
-                        <div class = "food" data-name = "k-mäso" onclick = "toggleFood (this)">🍗<span>Kuracie mäso</span></div>
-                        <div class = "food" data-name = "cibula" onclick = "toggleFood (this)">🧅<span>Cibuľa</span></div>
-                        <div class = "food" data-name = "cesnak" onclick = "toggleFood (this)">🧄<span>Cesnak</span></div>
-                        <div class = "food" data-name = "šalat" onclick = "toggleFood (this)">🥬<span>Šalát</span></div>
-                        <div class = "food" data-name = "mlieko" onclick = "toggleFood (this)">🥛<span>Mlieko</span></div>
-                        <div class = "food" data-name = "syr" onclick = "toggleFood (this)">🧀<span>Syr</span></div>
-                        <div class = "food" data-name = "vajko" onclick = "toggleFood (this)">🥚<span>Vajíčko</span></div>
-                        <div class = "food" data-name = "ryža" onclick = "toggleFood (this)">🍚<span>Ryža</span></div>
-                        <div class = "food" data-name = "zemiaky" onclick = "toggleFood (this)">🥔<span>Zemiaky</span></div>
-                        <div class = "food" data-name = "cestoviny" onclick = "toggleFood (this)">🍝<span>Cestoviny</span></div>
-                        <div class = "food" data-name = "paradajky" onclick = "toggleFood (this)">🍅<span>Paradajky</span></div>
-                        <div class = "food" data-name = "maslo" onclick = "toggleFood (this)">🧈<span>Maslo</span></div>
-                        <div class = "food" data-name = "mrkva" onclick = "toggleFood (this)">🥕<span>Mrkva</span></div>
-                        <div class = "food" data-name = "paprika" onclick = "toggleFood (this)">🫑<span>Paprika</span></div>
+            	<h1> Vyklikaj si potraviny z ktorých chceš variť.</h1>
+            	<div class="fridge-navigation">
+                    <button class = "arrow-btn" onclick="moveFridge(-1)">❮</button>
+                    <h2 id="category-title"> Mäso a ryby </h2>
+                    <button class = "arrow-btn" onclick="moveFridge(1)>❯</button>
+                </div>
+                <div class ="fridge-container">
+                    <div class="fridge-visual" id="fridge-shelf">
                     </div>
                 </div>
                 <div class = "f-ui">
