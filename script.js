@@ -117,4 +117,74 @@ function showExtraPage(type) {
 
 function closeExtraPage() {
     document.getElementById('extra-page').style.display = 'none';
+    
+    
+    
+const kategorie = [
+	{
+    	meno: "Mäso a ryby",
+        potraviny:[
+        	{id: "šunka", ikona: "🍖", nazov:"Šunka"},
+            { id: "ryba", ikona: "🐟", nazov: "Ryba" },
+            { id: "k-mäso", ikona: "🍗", nazov: "Kuracie mäso" }
+        ]
+    },
+    {
+    	meno: "Zelenina",
+        potraviny:[
+    		{ id: "cibula", ikona: "🧅", nazov: "Cibuľa" },
+            { id: "cesnak", ikona: "🧄", nazov: "Cesnak" },
+            { id: "šalat", ikona: "🥬", nazov: "Šalát" },
+            { id: "paradajky", ikona: "🍅", nazov: "Paradajky" },
+            { id: "mrkva", ikona: "🥕", nazov: "Mrkva" },
+            { id: "paprika", ikona: "🫑", nazov: "Paprika" }
+        ]
+    },
+    {
+    	meno: "Mliečne výrobky",
+        potraviny:[
+        	{ id: "mlieko", ikona: "🥛", nazov: "Mlieko" },
+            { id: "syr", ikona: "🧀", nazov: "Syr" },
+            { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
+            { id: "maslo", ikona: "🧈", nazov: "Maslo" }
+        ]
+    },
+    {
+    	meno: "Prílohy",
+        potraviny:[
+        	{ id: "ryža", ikona: "🍚", nazov: "Ryža" },
+            { id: "zemiaky", ikona: "🥔", nazov: "Zemiaky" },
+            { id: "cestoviny", ikona: "🍝", nazov: "Cestoviny" }
+        ]
+    }
+];
+
+let aktualnyIndex = 0;
+
+function renderFridge(){
+    const shelf = document.getElementById('fridge-sheld');
+    const title = document.getElementById('category-title');
+    const kat = kategorie[aktualnyIndex];
+    
+    title.innerText=kat.meno;
+    shelf.innerHTML="";
+    
+    kat.potraviny.forEach(p=>{
+        const.div=document.createElement('div');
+        div.className='food${vybraneSurovin.includes(p.id)?'acrive':"}
+`;
+		div.setAttribute('data-name',p.id);
+        div.onclick=function(){toggleFood(this);};
+        div.innerHTML=`${p.ikona}<span>${p.nazov}</span>`;
+    });
 }
+
+function moveFridge(direction){
+	aktualnyIndex+=direction;
+    if(aktualnyIndex<0) aktualnyIndex=kategorie.length - 1;
+    if(aktualnyIndex >= kategorie.length) aktualnyIndex = 0;
+    renderFridge();
+}
+
+window.onload=renderFridge;
+    
