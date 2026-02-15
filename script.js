@@ -103,7 +103,8 @@ function showExtraPage(type) {
             <p>Som študentka strednej školy</p> 
             
              `;
-    } else if (type === 'contact') {
+    } 
+    else if (type === 'contact') {
         title.innerText = "Kontakt";
         body.innerHTML = `
             <p>Máš nápad na skvelý recept? Alebo ti niečo nefunguje?</p>
@@ -117,7 +118,7 @@ function showExtraPage(type) {
 
 function closeExtraPage() {
     document.getElementById('extra-page').style.display = 'none';
-    
+}
     
     
 const kategorie = [
@@ -162,20 +163,22 @@ const kategorie = [
 let aktualnyIndex = 0;
 
 function renderFridge(){
-    const shelf = document.getElementById('fridge-sheld');
+    const shelf = document.getElementById('fridge-shelf');
     const title = document.getElementById('category-title');
-    const kat = kategorie[aktualnyIndex];
+    if(!shelf|| !title) return;
     
+    const kat = kategorie[aktualnyIndex];
     title.innerText=kat.meno;
     shelf.innerHTML="";
     
     kat.potraviny.forEach(p=>{
         const.div=document.createElement('div');
-        div.className='food${vybraneSurovin.includes(p.id)?'acrive':"}
-`;
+        const isActive = vybraneSuroviny.includes(p.id) ? 'active':'';
+        div.className=`food${isActive}`;
 		div.setAttribute('data-name',p.id);
         div.onclick=function(){toggleFood(this);};
         div.innerHTML=`${p.ikona}<span>${p.nazov}</span>`;
+        shelf.appendChild(div);
     });
 }
 
@@ -186,5 +189,7 @@ function moveFridge(direction){
     renderFridge();
 }
 
-window.onload=renderFridge;
+window.onload= function(){
+	renderFridge();
+};
     
