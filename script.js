@@ -172,9 +172,10 @@ function renderFridge(){
     shelf.innerHTML="";
     
     kat.potraviny.forEach(p=>{
-        const.div=document.createElement('div');
-        const isActive = vybraneSuroviny.includes(p.id) ? 'active':'';
-        div.className=`food${isActive}`;
+        const div=document.createElement('div');
+        const isActive = vybraneSuroviny.includes(p.id) ? ' active' :'';
+        div.className=`food ${isActive}`;
+        
 		div.setAttribute('data-name',p.id);
         div.onclick=function(){toggleFood(this);};
         div.innerHTML=`${p.ikona}<span>${p.nazov}</span>`;
