@@ -170,7 +170,6 @@ const kategorie = [
         potraviny:[
         	{ id: "mlieko", ikona: "🥛", nazov: "Mlieko" },
             { id: "syr", ikona: "🧀", nazov: "Syr" },
-            { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
             { id: "maslo", ikona: "🧈", nazov: "Maslo" }
         ]
     },
@@ -188,6 +187,7 @@ const kategorie = [
     	meno: "Iné",
         potraviny:[
             { id: "parapretlak", ikona: "🥫", nazov: "Paradajkový pretlak" },
+            { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
             { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" }
 		]
     }
