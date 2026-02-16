@@ -160,18 +160,23 @@ h3{
     background-color:#e1eacd;
     border-radius: 0 0 8px 8px;
     padding: 30px;
-    min-height: 400px;
+    height:auto;
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.325);
+    display: flex;
+    flex-direction: column;
 }
 
 .fridge-visual {
     min-height:400px;
-    display:grid;
-    grid-template-colums:repeat(auto-fill, minmax(100px,1fr));
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap:20px;
     padding:20px;
-    width:100px;
     height:auto;
+    margin-bottom: 30px;
 }
 
 .food {
