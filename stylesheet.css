@@ -175,11 +175,17 @@ h3{
 }
 
 .food {
+    background: #f8ffe7;
+    padding:20px:
+    border-radius:15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin:10px;
     width:80px;
+    height:80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
     cursor: pointer;
     font-size: 35px;
     filter: grayscale(0.75) brightness(0.3); 
