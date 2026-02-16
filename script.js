@@ -128,7 +128,7 @@ const kategorie = [
         	{id: "šunka", ikona: "🍖", nazov:"Šunka"},
             { id: "ryba", ikona: "🐟", nazov: "Ryba" },
             { id: "k-mäso", ikona: "🍗", nazov: "Kuracie mäso" },
-            { id: "slanina", ikona: "🥓", nazov: "Slanina" },
+            { id: "slanina", ikona: "🥓", nazov: "Slanina" }
         ]
     },
     {
@@ -149,20 +149,20 @@ const kategorie = [
             { id: "redkovka", ikona: "🫜", nazov: "Reďkovky" },
             { id: "batat", ikona: "🍠", nazov: "Batáty" },
             { id: "fazula", ikona: "🫘", nazov: "Fazuľa" },
-            { id: "uhorka", ikona: "🥒", nazov: "Uhorka" },
+            { id: "uhorka", ikona: "🥒", nazov: "Uhorka" }
             
         ]
     },
     {
     	meno: "Ovocie",
         potraviny:[
-    		{ id: "citron", ikona: "🍋", nazov: "Cibuľa" },
+    		{ id: "citron", ikona: "🍋", nazov: "Citrón" },
             { id: "limetka", ikona: "🍋‍🟩", nazov: "Limetka" },
             { id: "banan", ikona: "🍌", nazov: "Banán" },
             { id: "jahody", ikona: "🍓", nazov: "Jahody" },
             { id: "cucoriedky", ikona: "🫐", nazov: "Čučoriedky" },
             { id: "mango", ikona: "🥭", nazov: "Mango" },
-            { id: "zazvor", ikona: "🫚", nazov: "Zázvor" },
+            { id: "zazvor", ikona: "🫚", nazov: "Zázvor" }
         ]
     },
     {
@@ -171,7 +171,7 @@ const kategorie = [
         	{ id: "mlieko", ikona: "🥛", nazov: "Mlieko" },
             { id: "syr", ikona: "🧀", nazov: "Syr" },
             { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
-            { id: "maslo", ikona: "🧈", nazov: "Maslo" },
+            { id: "maslo", ikona: "🧈", nazov: "Maslo" }
         ]
     },
     {
@@ -181,14 +181,14 @@ const kategorie = [
             { id: "zemiaky", ikona: "🥔", nazov: "Zemiaky" },
             { id: "cestoviny", ikona: "🍝", nazov: "Cestoviny" },
             { id: "chlieb", ikona: "🍞", nazov: "Chlieb" },
-            { id: "tortila", ikona: "🫓", nazov: "Tortily" },
+            { id: "tortila", ikona: "🫓", nazov: "Tortily" }
         ]
     },
     {
     	meno: "Iné",
         potraviny:[
             { id: "parapretlak", ikona: "🥫", nazov: "Paradajkový pretlak" },
-            { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" },
+            { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" }
 		]
     }
 ];
