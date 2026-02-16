@@ -165,12 +165,13 @@ h3{
 }
 
 .fridge-visual {
-    height:400px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
+    min-height:400px;
+    display:grid;
+    grid-template-colums:repeat(auto-fill, minmax(100px,1fr));
     gap:20px;
+    padding:20px;
+    width:100px;
+    height:auto;
 }
 
 .food {
