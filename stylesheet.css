@@ -77,11 +77,12 @@ button:hover {
 
 
 
-.intro, .fotka{
+.intro, .fotka, .recipe-card{
     background:#fdfff8;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    margin-bottom:20px;
 }
 
 .intro p {
@@ -91,12 +92,7 @@ button:hover {
     padding: 10px 0;
 }
 
-div>div:not(.food),p {
-    background: #f8ffe7;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+
 
 h3{
     color:#731331;
