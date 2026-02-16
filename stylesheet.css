@@ -174,14 +174,14 @@ h3{
 }
 
 .food {
-    position: static;
-    margin:15px;
+    margin:10px;
+    width:80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     font-size: 35px;
-    filter: grayscale(1) brightness(0.3); 
+    filter: grayscale(0.75) brightness(0.3); 
     transition: all 0.3s ease;
 }
 
