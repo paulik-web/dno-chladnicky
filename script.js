@@ -127,8 +127,8 @@ const kategorie = [
         potraviny:[
         	{id: "šunka", ikona: "🍖", nazov:"Šunka"},
             { id: "ryba", ikona: "🐟", nazov: "Ryba" },
-            { id: "k-mäso", ikona: "🍗", nazov: "Kuracie mäso" }
-            { id: "slanina", ikona: "🥓", nazov: "Slanina" }
+            { id: "k-mäso", ikona: "🍗", nazov: "Kuracie mäso" },
+            { id: "slanina", ikona: "🥓", nazov: "Slanina" },
         ]
     },
     {
@@ -139,17 +139,17 @@ const kategorie = [
             { id: "šalat", ikona: "🥬", nazov: "Šalát" },
             { id: "paradajky", ikona: "🍅", nazov: "Paradajky" },
             { id: "mrkva", ikona: "🥕", nazov: "Mrkva" },
-            { id: "paprika", ikona: "🫑", nazov: "Paprika" }
-            { id: "avokado", ikona: "🥑", nazov: "Avokádo" }
-            { id: "hrach", ikona: "🫛", nazov: "Hrach" }
-            { id: "brokolica", ikona: "🥦", nazov: "Brokolica" }
-            { id: "chilli", ikona: "🌶️", nazov: "Chilli" }
-            { id: "kukurica", ikona: "🌽", nazov: "Kukurica" }
-            { id: "olivy", ikona: "🫒", nazov: "Olivy" }
-            { id: "redkovka", ikona: "🫜", nazov: "Reďkovky" }
-            { id: "batat", ikona: "🍠", nazov: "Batáty" }
-            { id: "fazula", ikona: "🫘", nazov: "Fazuľa" }
-            { id: "uhorka", ikona: "🥒", nazov: "Uhorka" }
+            { id: "paprika", ikona: "🫑", nazov: "Paprika" },
+            { id: "avokado", ikona: "🥑", nazov: "Avokádo" },
+            { id: "hrach", ikona: "🫛", nazov: "Hrach" },
+            { id: "brokolica", ikona: "🥦", nazov: "Brokolica" },
+            { id: "chilli", ikona: "🌶️", nazov: "Chilli" },
+            { id: "kukurica", ikona: "🌽", nazov: "Kukurica" },
+            { id: "olivy", ikona: "🫒", nazov: "Olivy" },
+            { id: "redkovka", ikona: "🫜", nazov: "Reďkovky" },
+            { id: "batat", ikona: "🍠", nazov: "Batáty" },
+            { id: "fazula", ikona: "🫘", nazov: "Fazuľa" },
+            { id: "uhorka", ikona: "🥒", nazov: "Uhorka" },
             
         ]
     },
@@ -161,8 +161,8 @@ const kategorie = [
             { id: "banan", ikona: "🍌", nazov: "Banán" },
             { id: "jahody", ikona: "🍓", nazov: "Jahody" },
             { id: "cucoriedky", ikona: "🫐", nazov: "Čučoriedky" },
-            { id: "mango", ikona: "🥭", nazov: "Mango" }
-            { id: "zazvor", ikona: "🫚", nazov: "Zázvor" }
+            { id: "mango", ikona: "🥭", nazov: "Mango" },
+            { id: "zazvor", ikona: "🫚", nazov: "Zázvor" },
         ]
     },
     {
@@ -171,7 +171,7 @@ const kategorie = [
         	{ id: "mlieko", ikona: "🥛", nazov: "Mlieko" },
             { id: "syr", ikona: "🧀", nazov: "Syr" },
             { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
-            { id: "maslo", ikona: "🧈", nazov: "Maslo" }
+            { id: "maslo", ikona: "🧈", nazov: "Maslo" },
         ]
     },
     {
@@ -179,16 +179,16 @@ const kategorie = [
         potraviny:[
         	{ id: "ryža", ikona: "🍚", nazov: "Ryža" },
             { id: "zemiaky", ikona: "🥔", nazov: "Zemiaky" },
-            { id: "cestoviny", ikona: "🍝", nazov: "Cestoviny" }
+            { id: "cestoviny", ikona: "🍝", nazov: "Cestoviny" },
             { id: "chlieb", ikona: "🍞", nazov: "Chlieb" },
             { id: "tortila", ikona: "🫓", nazov: "Tortily" },
         ]
     },
-        {
+    {
     	meno: "Iné",
         potraviny:[
             { id: "parapretlak", ikona: "🥫", nazov: "Paradajkový pretlak" },
-            { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" }
+            { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" },
 		]
     }
 ];
