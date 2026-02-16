@@ -91,7 +91,7 @@ button:hover {
     padding: 10px 0;
 }
 
-div>div,p {
+div>div:not(.food),p {
     background: #f8ffe7;
     padding: 20px;
     border-radius: 15px;
