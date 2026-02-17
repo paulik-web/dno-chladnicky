@@ -186,7 +186,7 @@ const kategorie = [
     {
     	meno: "Iné",
         potraviny:[
-            { id: "parapretlak", ikona: "🥫", nazov: "Paradajkový pretlak" },
+            { id: "parapretlak", ikona: "🥫", nazov: "Paradaj. pretlak" },
             { id: "vajko", ikona: "🥚", nazov: "Vajíčko" },
             { id: "čokoláda", ikona: "🍫", nazov: "Čokoláda" }
 		]
