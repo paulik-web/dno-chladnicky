@@ -76,9 +76,8 @@ button:hover {
 
 
 
-
-.intro, .fotka, .footer-nav p {
-    background:#f8ffe7;
+div>div, p {
+    background: #f8ffe7;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
@@ -119,12 +118,12 @@ h3{
     min-width: 130px;
     max-width: 200px;
     height: 36px;
-    background-color:#04473c;
+    background-color:#04473c !important;
     color:#e1eacd;
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 15px !important;
     cursor: pointer;
     font-size: 14px;
     transition: all 0.2s ease;
@@ -145,7 +144,7 @@ h3{
 }
 
 .tab.active {
-    background-color:#e1eacd;
+    background-color:#e1eacd !important;
     color:#01352c;
     font-weight: bold;
     height: 42px;
@@ -155,34 +154,33 @@ h3{
     background-color:#e1eacd;
     border-radius: 0 0 8px 8px;
     padding: 30px;
-    height:auto;
+    height:auto !important;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.325);
-    display: flex;
+    display: block;
     flex-direction: column;
 }
 
 .fridge-visual {
     min-height:400px;
-    display:flex;
+    display:block;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap:20px;
     padding:20px;
-    height:auto;
+    height:auto !important;
     margin-bottom: 30px;
 }
 
 .food {
-    background: #f8ffe7;
     padding:20px:
     border-radius:15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin:10px;
-    width:80px;
-    height:80px;
-    display: flex;
+    width:80px !important;
+    height:80px !important;
+    display: inline-flex !important;
     flex-direction: column;
     align-items: center;
     justify-content:center;
@@ -202,7 +200,7 @@ h3{
 }
 
 .food.active {
-    filter: grayscale(0) brightness(1); 
+    filter: grayscale(0) brightness(1) !important; 
     transform: scale(1.1);
     z-index: 10;
 }
