@@ -112,6 +112,7 @@ h3{
     height: 50px;
     background-color: #01352c;
     border-radius: 8px 8px 0 0;
+    box-shadow: none !important;
     gap: 5px;
 }
 
