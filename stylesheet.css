@@ -76,7 +76,7 @@ button:hover {
 
 
 
-div>div, p {
+div>div:not(.tab):not(.tab.active), p {
     background: #f8ffe7;
     padding: 20px;
     border-radius: 15px;
@@ -88,6 +88,7 @@ div>div, p {
     background: none;  
     box-shadow: none;  
     padding: 10px 0;
+    border: 2px solid: #184512;
 }
 
 
@@ -128,7 +129,8 @@ h3{
     font-size: 14px;
     transition: all 0.2s ease;
     border: none;
-    margin-bottom:0; 
+    box-shadow: none !important;
+    margin-bottom:0 !important; 
 }
 
 .tab:hover {
@@ -148,6 +150,7 @@ h3{
     color:#01352c;
     font-weight: bold;
     height: 42px;
+    box-shadow: none !important;
 }
 
 .context {
@@ -175,7 +178,7 @@ h3{
 
 .food {
     padding:20px:
-    border-radius: 30px;
+    border-radius: 30px !important;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin:10px;
     width:80px !important;
@@ -197,6 +200,7 @@ h3{
     background: rgba(255,255,255,0.7);
     padding: 2px 5px;
     border-radius: 5px;
+    box-shadow: none !important;
 }
 
 .food.active {
