@@ -124,7 +124,7 @@ h3{
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
-    justifi-content: center;
+    justify-content: center;
     padding: 0 15px !important;
     cursor: pointer;
     font-size: 14px;
@@ -179,7 +179,7 @@ h3{
 
 .food {
     background: #f8ffe7 !important;
-    padding:20px:
+    padding:20px;
     border-radius: 30px !important;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin:10px;
