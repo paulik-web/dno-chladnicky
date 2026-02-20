@@ -76,11 +76,16 @@ button:hover {
 
 
 
-div>div:not(.tab):not(.tab-bar), p, .footer-nav {
+.intro, .fotka, .recipe-card, .footer-nav, #extra-body {
     background: #f8ffe7;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    box-shadown: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
 }
 
 .intro p {
