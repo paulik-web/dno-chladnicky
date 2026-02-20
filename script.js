@@ -58,6 +58,13 @@ function toggleFood(element) {
         vybraneSuroviny.push(meno);
         element.classList.add('active');
     }
+    
+    const button = document.querySelector('.kuk-butt');
+    if (vybraneSuroviny.length > 0){
+        button.innerHTML = `🔍 Čo môžeme uvariť? (${vybraneSuroviny.length})`;
+    } else {
+        button.innerHTML = `🔍 Čo môžeme uvariť?`;
+    }
 }
 
 function generateRecipes() {
