@@ -240,4 +240,13 @@ function moveFridge(direction){
 window.onload= function(){
 	renderFridge();
 };
+
+function resetFridge (){
+	vybraneSuroviny = []; 
+    const allFoods = document.querySelectorAll('.food');
+    allFoods.forEach(f=f.classList.remove('active'));
+    
+    document.querySelector('kuk-butt').innerHTML='🔍 Čo môžeme uvariť?';
+    console.log("Chladnička bola vyčistená.");
+}
     
