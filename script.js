@@ -59,12 +59,17 @@ function toggleFood(element) {
         element.classList.add('active');
     }
     
+    updateButtonCount()
+}
+function updateButtonCount() {
     const button = document.querySelector('.kuk-butt');
-    if (vybraneSuroviny.length > 0){
-        button.innerHTML = `🔍 Čo môžeme uvariť? (${vybraneSuroviny.length})`;
-    } else {
-        button.innerHTML = `🔍 Čo môžeme uvariť?`;
-    }
+    if (button) {
+    	if (vybraneSuroviny.length > 0){
+        	button.innerHTML = `🔍 Čo môžeme uvariť? (${vybraneSuroviny.length})`;
+    	} else {
+        	button.innerHTML = `🔍 Čo môžeme uvariť?`;
+    	}
+	}
 }
 
 function generateRecipes() {
@@ -221,6 +226,8 @@ function renderFridge(){
         div.innerHTML=`${p.ikona}<span>${p.nazov}</span>`;
         shelf.appendChild(div);
     });
+    
+    updateButtonCount();
 }
 
 function moveFridge(direction){
