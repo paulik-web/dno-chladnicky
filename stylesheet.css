@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.6;
@@ -225,14 +229,16 @@ h3{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: #afba82; 
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    left: 0;
+    top: 0;
 }
 
 .extra-content {
@@ -292,10 +298,14 @@ h3{
 @media (max-width: 768px) {
 	body {
     	padding: 10px;
+        overflow-x: hidden;
+        width: 100%;
     }
     
     .browser {
     	max-width:100%;
+        width: 100%;
+        margin: 0;
     }
     
     .main-content {
@@ -325,25 +335,31 @@ h3{
     
     .full-page-overlay {
         padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         align-items: flex-start;
         overflow-y: auto;
     }
     
     .extra-content { 
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 15px;
+        margin: 0;
     }
     
     #extra-body {
-        width:100%;
+        width:100% !important;
         padding:10px;
+        margin: 0;
+        word-wrap: break-word;
         font-size:0.95rem;
         box-sizing:border-box;
     }
     
     .back-button {
-        width:100%;
+        width:90%;
         margin-top:20px;
     }
 }
