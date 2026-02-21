@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 20px;
     max-width: 1000px;
+    width: 100%;
     margin: auto;
 }
 
@@ -285,4 +286,39 @@ h3{
 .f-ui {
 	text-align: center;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+	body {
+    	padding: 10px;
+    }
+    
+    .browser {
+    	max-width:100%;
+    }
+    
+    .main-content {
+    	grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .tab {
+    	min-width:80px;
+        font-size: 12px;
+        padding: 0 5px !important;
+    }
+    
+    .food {
+    	width: 70px !important;
+        height: 70px !important;
+        margin: 5px;
+    }
+    
+    .context {
+    	padding: 15px;
+    }
+    
+    h1 {
+    	font-size: 1.5rem;
+    }
 }
