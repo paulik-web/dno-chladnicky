@@ -321,4 +321,28 @@ h3{
     h1 {
     	font-size: 1.5rem;
     }
+    
+    .full-page-overlay {
+        padding: 10px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+    
+    .extra-content { 
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    #extra-body {
+        width:100%;
+        padding:10px;
+        font-size:0.95rem;
+        box-sizing:border-box;
+    }
+    
+    .back-button {
+        width:100%;
+        margin-top:20px;
+    }
 }
