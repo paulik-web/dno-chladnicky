@@ -363,3 +363,13 @@ h3{
         margin-top:20px;
     }
 }
+
+.recipe-filters {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-butt
