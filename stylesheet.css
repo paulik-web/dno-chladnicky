@@ -372,4 +372,19 @@ h3{
     margin-bottom: 20px;
 }
 
-.filter-butt
+.filter-butt {
+	background-color: #04473c;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+.filter-butt.active {
+	backgound-color: #be4b49;
+    box-shadow: 0 0 10px rgba(190, 75, 73, 0.5);
+}
+
+#recepty-zoznam {
+	display: flex;
+    flex-direction:column;
+    gap: 15px;
+}
