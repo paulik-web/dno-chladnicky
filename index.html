@@ -59,6 +59,15 @@
             </div>
             <div id = "recepty" class = "tab-panel">
                 <h1> Vitaj na zbierke receptov.</h1>
+                <div class = "recipe-filters">
+                    <button class = "filter-butt active" onclick = "filterByTyp('všetko')">Všetko</button>
+                    <button class = "filter-butt" onclick = "filterByTyp('raňajky')">Raňajky</button>
+                    <button class = "filter-butt" onclick = "filterByTyp('obed')">Obedy</button>
+                    <button class = "filter-butt" onclick = "filterByTyp('večera')">Večere</button>
+                    <button class = "filter-butt" onclick = "filterByTyp('snack')">Snacky</button>
+                    <button class = "filter-butt" onclick = "filterByTyp('howto')">How to</button>
+                </div>
+                <div id="recepty-zoznam"></div>
             </div>
         </div>
     </div>
