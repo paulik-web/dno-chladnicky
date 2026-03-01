@@ -1,8 +1,8 @@
 function openTab(evt, tabId) {
-    console.log("Klikla si na kartu: " + tabId); 
     let panels = document.getElementsByClassName("tab-panel");
     for (let i = 0; i < panels.length; i++) {
-        panels[i].style.display = "none"; 
+    	panels[i].style.display = "none"; 
+        panels[i].classList.remove("active");
     }
     let tabs = document.getElementsByClassName("tab");
     for (let i = 0; i < tabs.length; i++) {
@@ -10,24 +10,19 @@ function openTab(evt, tabId) {
     }
     const selectedPanel = document.getElementById(tabId);
     if (selectedPanel) {
-        selectedPanel.style.display = "block";
-    } else {
-        console.error("Panel s ID '" + tabId + "' neexistuje!");
+      	selectedPanel.style.display = "block";
+   		selectedPanel.classList.add ("active");
     }
     evt.currentTarget.classList.add("active");
 }
 
 function switchTabFromButton (tabId){
     const tabs = document.querySelectorAll('.tab');
-    let targetTab;
     tabs.forEach(tab =>{
         if (tab.getAttribute('onclick').includes(tabId)) {
-            targetTab = tab;
+            tab.click();
         }
     });
-    if (targetTab) {
-        targetTab.click();
-    }
 }
 
 
@@ -64,42 +59,52 @@ function toggleFood(element) {
 function updateButtonCount() {
     const button = document.querySelector('.kuk-butt');
     if (button) {
-    	if (vybraneSuroviny.length > 0){
-        	button.innerHTML = `🔍 Čo môžeme uvariť? (${vybraneSuroviny.length})`;
-    	} else {
-        	button.innerHTML = `🔍 Čo môžeme uvariť?`;
-    	}
+      button.innerHTML = vybraneSuroviny.length > 0
+      	? `🔍 Čo môžeme uvariť? (${vybraneSuroviny.length})`
+         : `🔍 Čo môžeme uvariť?`;
 	}
 }
 
 function generateRecipes() {
-    const vysledok = mojuRecepty.filter(recept => 
+    let vysledok = mojuRecepty.filter(recept => 
         recept.ingrediencie.some(ing => vybraneSuroviny.includes(ing))
     );
+	if (aktualnyFilterTyp !== "Všetko") {
+      vysledok = vysledok.filter(r.typ===aktualnyFilterTyp);
+   }
+   
+   zobrazRecepty(vysledok, true);
+   switchTabFromButton('recepty');
+}
 
-    const receptyPanel = document.getElementById('recepty');
-    let htmlObsah = `<h1>Nájdené recepty (${vysledok.length}):</h1>`;
-    
-    if (vysledok.length > 0) {
-        vysledok.forEach(r => {
-            const mas = r.ingrediencie.filter(ing => vybraneSuroviny.includes(ing));
-            const chybeju = r.ingrediencie.filter(ing => !vybraneSuroviny.includes(ing));
-
-            htmlObsah += `
-                <div class="recipe-card" style="background: white; margin: 10px; padding: 15px; border-radius: 10px; border-left: 5px solid #be4b49;">
-                    <span style="color: #be4b49; font-weight: bold;">${r.typ}</span>
-                    <h3>${r.nazov}</h3>
-                    <p><b>Máš zo svojej chladničky:</b> <span style="color: green;">${mas.join(', ')}</span></p>
-                    ${chybeju.length > 0 ? `<p style="color: #888;"><b>Ešte by sa ti hodilo:</b> ${chybeju.join(', ')}</p>` : `<p style="color: green;"><b>Máš všetko potrebné! ✅</b></p>`}
-                    <p><i>Postup:</i> ${r.postup}</p>
-                </div>`;
-        });
-    } else {
-        htmlObsah += "<p>Nevybral si žiadne suroviny. Skús na niečo v chladničke kliknúť!</p>";
-    }
-
-    receptyPanel.innerHTML = htmlObsah;
-    switchTabFromButton('recepty');
+function zobratRecepty(zoznam, inteligentnyRezim) {
+   const komtajner = document.getElemenrById('recepty-zoznam');
+   if (!kontajner) return;
+   
+   let html = "";
+   if (zoznam.length === 0) {
+      html = `<p class = "empty-msg">Nenašli sme žiadne recepty pre kategóriu "${aktualnyFilterTyp}" a tvoj výber.</p>`;
+   } else {
+      zoznam.forEach(r=> {
+      	const mas = r.ingrediencie.filter(ing => vybraneSuroviny.includes(ing));
+         const chybaju = r.ingrediencie.filter(ing => !vybraneSuroviny.includes(ing));
+         
+         html += `
+         	<div class = "recipe-card">
+            	<span class = "recipe-tag">${r.typ}</span>
+               <h3>${r.nazov}</h3>
+               <div class ="recipe-ingred">
+               	${inteligentnyRezim ? `
+                  	<p><b>Máš:</b> <span style ="color:green">${mas.join(', ')}</span></p>
+                     ${chybaju.length> 0 ? `<p style ="color: #666"><b>Chýba:</b> ${chybaju.join(', ')}</p>` : ;'<p style="color: green"><b>Máš všetko! ✅</b></p>'}
+                  ` : `<p><b>Potrebuješ:</b> ${r.ingrediencie.join(', ')}</p>`}
+               </div>
+               <p class="recipe-steps"><i>Postup:</i> ${r.postup}</p>
+            </div>
+         `;
+      });
+   }
+   kontajner.innerHTML = html;
 }
 
 
@@ -239,12 +244,12 @@ function moveFridge(direction){
 
 window.onload= function(){
 	renderFridge();
+   filterByTyp('Všetko');
 };
 
 function resetFridge (){
 	vybraneSuroviny = []; 
     renderFridge();
     updateButtonCount();
-    console.log("Chladnička bola vyčistená.");
+    filterByTyp('Všetko');
 }
-    
