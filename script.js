@@ -1,3 +1,5 @@
+let aktualnyFilterTyp = "Všetko";
+
 function openTab(evt, tabId) {
     let panels = document.getElementsByClassName("tab-panel");
     for (let i = 0; i < panels.length; i++) {
@@ -23,6 +25,16 @@ function switchTabFromButton (tabId){
             tab.click();
         }
     });
+}
+
+function filterByTyp(typ) {
+   aktualnyFilterTyp = typ;
+   if (vybraneSuroviny.length ===0) {
+      const filtrat = mojuRecepty.filter( r => typ === "Všetko" || r.typ === typ);
+      zobrazRecepty(filtrat; false);
+   } else {
+         generateRecipes();
+   }
 }
 
 
@@ -70,15 +82,15 @@ function generateRecipes() {
         recept.ingrediencie.some(ing => vybraneSuroviny.includes(ing))
     );
 	if (aktualnyFilterTyp !== "Všetko") {
-      vysledok = vysledok.filter(r.typ===aktualnyFilterTyp);
+      vysledok = vysledok.filter(r => r.typ===aktualnyFilterTyp);
    }
    
    zobrazRecepty(vysledok, true);
    switchTabFromButton('recepty');
 }
 
-function zobratRecepty(zoznam, inteligentnyRezim) {
-   const komtajner = document.getElemenrById('recepty-zoznam');
+function zobrazRecepty(zoznam, inteligentnyRezim) {
+   const kontajner = document.getElemenrById('recepty-zoznam');
    if (!kontajner) return;
    
    let html = "";
@@ -96,7 +108,7 @@ function zobratRecepty(zoznam, inteligentnyRezim) {
                <div class ="recipe-ingred">
                	${inteligentnyRezim ? `
                   	<p><b>Máš:</b> <span style ="color:green">${mas.join(', ')}</span></p>
-                     ${chybaju.length> 0 ? `<p style ="color: #666"><b>Chýba:</b> ${chybaju.join(', ')}</p>` : ;'<p style="color: green"><b>Máš všetko! ✅</b></p>'}
+                     ${chybaju.length> 0 ? `<p style ="color: #666"><b>Chýba:</b> ${chybaju.join(', ')}</p>` : '<p style="color: green"><b>Máš všetko! ✅</b></p>'}
                   ` : `<p><b>Potrebuješ:</b> ${r.ingrediencie.join(', ')}</p>`}
                </div>
                <p class="recipe-steps"><i>Postup:</i> ${r.postup}</p>
