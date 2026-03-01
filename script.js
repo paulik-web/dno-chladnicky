@@ -31,7 +31,7 @@ function filterByTyp(typ) {
    aktualnyFilterTyp = typ;
    if (vybraneSuroviny.length ===0) {
       const filtrat = mojuRecepty.filter( r => typ === "Všetko" || r.typ === typ);
-      zobrazRecepty(filtrat; false);
+      zobrazRecepty(filtrat, false);
    } else {
          generateRecipes();
    }
@@ -90,7 +90,7 @@ function generateRecipes() {
 }
 
 function zobrazRecepty(zoznam, inteligentnyRezim) {
-   const kontajner = document.getElemenrById('recepty-zoznam');
+   const kontajner = document.getElementById('recepty-zoznam');
    if (!kontajner) return;
    
    let html = "";
