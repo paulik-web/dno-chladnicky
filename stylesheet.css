@@ -188,8 +188,9 @@ h3{
 }
 
 #fridge-shelf {
-    display: grid;
-    grid-template-columns: repeat (auto-fill, minmax(100px, 1fr));
+    display: flex;
+    flex-wrap: wrap
+    widgh: 100%;
     gap: 15px;
     padding: 20px;
     justify-items: center;
