@@ -256,7 +256,8 @@ function moveFridge(direction){
 
 window.onload= function(){
 	renderFridge();
-   filterByTyp('Všetko');
+   document.getElementById('recepty-zoznam').innerHTML=
+   	'<p class="empty-msg">Vyber si kategóriu alebo suroviny v chladničke.</p>';
 };
 
 function resetFridge (){
