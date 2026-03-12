@@ -192,7 +192,7 @@ h3{
     flex-wrap: wrap
     widgh: 100%;
     gap: 15px;
-    padding: 20px;
+    padding: 35px;
     justify-items: center;
 }
 
@@ -202,8 +202,8 @@ h3{
     border-radius: 30px !important;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin:10px;
-    width:80px !important;
-    height:80px !important;
+    width:100px !important;
+    height:90px !important;
     display: inline-flex !important;
     flex-direction: column;
     align-items: center;
