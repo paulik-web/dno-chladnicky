@@ -39,7 +39,7 @@ function filterByTyp(typ) {
 
 
 const mojuRecepty = [
-    { nazov: "Praženica s cibuľkou", typ: "Raňajky", ingrediencie: ["vajko", "cibula"], postup: "Na cibuľke speníme vajíčka." },
+    { nazov: "Praženica s cibuľkou", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Na panvici si necháme rozpustiť maslo na jemnom plameni. Nakrájame si cibuľku na malé kúsky a odložíme si ju stranou.V pohári si rozšľaháme vajíčko a pridáme k nemu nakrájanú cibuľku. Vlejeme vajíčko s cibuľkou do panvice. Na zmienenom jemnom plameni pomaly šľaháme vajíčko až nám neztuhne na požadovanú konzistenciu. Nakladame na tanie a podávame." },
     { nazov: "Šunková omeleta so syrom", typ: "Raňajky", ingrediencie: ["vajko", "šunka", "syr"], postup: "Vajíčka rozmiešame, pridáme šunku a syr." },
     { nazov: "Rýchly vajíčkový šalát", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Uvarené vajíčka nakrájame nadrobno, zmiešame s jemne nasekanou cibuľou, maslom a dochutíme soľou." },
 
