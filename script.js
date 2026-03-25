@@ -39,11 +39,11 @@ function filterByTyp(typ) {
 
 
 const mojuRecepty = [
-    { nazov: "Praženica s cibuľkou", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Na panvici si necháme rozpustiť maslo na jemnom plameni. Nakrájame si cibuľku na malé kúsky a odložíme si ju stranou.V pohári si rozšľaháme vajíčko a pridáme k nemu nakrájanú cibuľku. Vlejeme vajíčko s cibuľkou do panvice. Na zmienenom jemnom plameni pomaly šľaháme vajíčko až nám neztuhne na požadovanú konzistenciu. Nakladame na tanie a podávame." },
-    { nazov: "Šunková omeleta so syrom", typ: "Raňajky", ingrediencie: ["vajko", "šunka", "syr"], postup: "Vajíčka rozmiešame, pridáme šunku a syr." },
-    { nazov: "Rýchly vajíčkový šalát", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Uvarené vajíčka nakrájame nadrobno, zmiešame s jemne nasekanou cibuľou, maslom a dochutíme soľou." },
+    { nazov: "Praženica s cibuľkou", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Na panvici si necháme rozpustiť maslo na jemnom plameni. Nakrájame si cibuľku na malé kúsky a odložíme si ju stranou.V pohári si rozšľaháme vajíčko a pridáme k nemu nakrájanú cibuľku. Vlejeme vajíčko s cibuľkou do panvice. Na zmienenom jemnom plameni pomaly šľaháme vajíčko až nám neztuhne na požadovanú konzistenciu. Nakladáme na tanie a podávame." },
+    { nazov: "Šunková omeleta so syrom", typ: "Raňajky", ingrediencie: ["vajko", "šunka", "syr"], postup: "V hlbšom tanieri alebo pohári si vidličkou poriadne rozšľaháme vajíčka, až kým sa žĺtka nespoja s bielkami. Šunku si nakrájame na tenké prúžky a syr si nastrúhame nahrubo. Rozohrejeme panvicu s kvapkou oleja alebo kúskom masla. Vylejeme vajíčka a rovnomerne ich rozlejeme po celej ploche. Keď vajíčka začnú zospodu tuhnúť, na jednu polovicu rovnomerne nasypeme šunku a syr. Omeletu opatrne preložíme napoly a necháme ešte chvíľu piecť, aby sa syr vo vnútri krásne roztopil. Nakladáme na tanier a podávame." },
+    { nazov: "Rýchly vajíčkový šalát", typ: "Raňajky", ingrediencie: ["vajko", "cibula", "maslo"], postup: "Vajíčka si vopred uvaríme natvrdo (približne 8-10 minút), necháme ich vychladnúť v studenej vode a ošúpeme. Cibuľku si nasekáme na veľmi jemné kocky. Vajíčka nakrájame nadrobno alebo pretlačíme cez krájač na šalát. Do misky vložíme zmäknuté maslo, pridáme vajíčka a cibuľku. Všetko spolu poriadne premiešame, kým sa ingrediencie nespoja do krémovej konzistencie. Podľa chuti dosolíme a môžeme podávať s čerstvým pečivom. Nakladáme na tanier a nakladáme." },
 
-    { nazov: "Kuracie s ryžou", typ: "Obed", ingrediencie: ["k-mäso", "ryža", "cibula", "mrkva"], postup: "Kurča opečieme na cibulke a podávame s ryžou a uvarenou mrkvou." },
+    { nazov: "Kuracie s ryžou", typ: "Obed", ingrediencie: ["k-mäso", "ryža", "cibula", "mrkva"], postup: "Najskôr si dáme variť ryžu podľa návodu (buď na obale alebo otvoríme návod na varenie ryže v "How to"). Kuracie mäso očistíme a nakrájame na menšie kocky. Cibuľku a mrkvu si očistíme – cibuľu nakrájame nadrobno a mrkvu na tenké kolieska. Na panvici s rozpáleným olejom speníme cibuľku, pridáme kuracie mäso a sprudka ho opečieme, aby sa zatiahlo. Potom pridáme mrkvu, podlejeme troškou vody a dusíme pod pokrievkou, kým mäso aj zelenina nezmäknú. Hotové mäso so šťavou servírujeme na kopčeku dusenej ryže." },
     { nazov: "Zemiaky s pečenou rybou", typ: "Obed", ingrediencie: ["ryba", "zemiaky", "cibula"], postup: "Rybu a zemiaky pečieme spolu v rúre." },
     { nazov: "Cestoviny s paradajkovou omáčkou", typ: "Obed", ingrediencie: ["cestoviny", "paradajky", "cesnak", "syr"], postup: "Uvaríme cestoviny a pridáme omáčku z paradajok a cesnaku." },
 
@@ -129,7 +129,8 @@ function showExtraPage(type) {
         title.innerText = "O nás";
         body.innerHTML = `
             <p>Kto sme ?</p>
-            <p>Som študentka strednej školy</p> 
+            <p>Som študentka gymnázia, ktorá sa venuje programovaniu a vareniu vo voľnom čase. Táto stránka vznikla v snahe prepojiť tieto 2 okruhy mojich záujmov a rovnako porozumieť aj problematike, ktorej som sa začala venovať vďaka svojej Stredoškolskej Odbornej Činnosti.
+            V mojej práci som sa venovala prebytočnému vyhadzovaniu potravín, teda aký majú efekt na domácnosti a hlavne na životné prostredie. Táto stránka slúži na pomoc študentom a ľuďom, ktorý chcú rýchle recepty z presných surovín aké si vyberú. Nanajvýš tieto recepty sú ekologické v rámci prihliadania aby uživateľ nevytvoril ďalší prebytočný potravinový odpad.</p> 
             
              `;
     } 
